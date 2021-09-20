@@ -1,0 +1,19 @@
+﻿<Window x:Class="LoginApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginApp"
+        mc:Ignorable="d"
+        Title="LoginApp" Height="300" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
+    <Grid>
+        <Button x:Name="ButtonEnter" Content="Увійти" HorizontalAlignment="Center" Margin="10,231,10,0" VerticalAlignment="Top" Width="474" Click="ButtonEnter_Click" Height="30"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Center" Height="23" Margin="10,140,10,0" TextWrapping="Wrap" Text="User" VerticalAlignment="Top" Width="474" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Margin="10,192,10,0" VerticalAlignment="Top" Width="474" Height="23" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBlock x:Name="Logo" HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" Text="LoginApp" VerticalAlignment="Top" Height="54" Width="227" FontFamily="Jokerman" FontWeight="Bold" FontSize="36" TextAlignment="Center" TextDecorations="Underline"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,119,0,0" TextWrapping="Wrap" Text="Логін:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,171,0,0" TextWrapping="Wrap" Text="Пароль:" VerticalAlignment="Top"/>
+        <Button Content="Вихід" HorizontalAlignment="Left" Margin="412,270,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Cursor="Hand"/>
+
+    </Grid>
+</Window>
