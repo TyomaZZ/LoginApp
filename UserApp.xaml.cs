@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,10 @@ namespace LoginApp
     /// </summary>
     public partial class UserApp : Window
     {
-        string user;
+        string user, fileUsers = "giveMeYourPassword.txt";
         bool loged;
         int access;
+        
 
         public UserApp(string user, bool loged, int access)
         {
@@ -34,6 +36,29 @@ namespace LoginApp
                 Application.Current.Shutdown();
             }
             WindowUser.Title = this.user;
+            
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            int a = 0;
+            string[] users = new string[File.ReadAllLines(fileUsers).Length];
+            foreach (string str in File.ReadAllLines(fileUsers))
+            {
+                //if (!str.Equals(""))
+                //{
+                    users[a] = str.Split('/')[0];
+                    a++;
+                //}
+                
+            }
+
+                ListBoxList.ItemsSource = users;
         }
     }
 }

@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="UserApp" Height="450" Width="800">
     <Grid>
-        
-    </Grid>
+    <ListBox x:Name="ListBoxList" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="144" Loaded="ListBox_Loaded"/>
+  </Grid>
 </Window>
