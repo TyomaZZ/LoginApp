@@ -25,6 +25,7 @@ namespace LoginApp
         bool loged = false;
 
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace LoginApp
                         return;
                     }
                 }
+                MessageBox.Show("Невірний логін або пароль");
             }
             else
             {
@@ -58,6 +60,28 @@ namespace LoginApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void GrigLog_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+
+        private void GrigLog_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void GrigLog_MouseMove(object sender, MouseEventArgs e)
+        {  
+        }
+
+        private void GridLog_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void WindowLog_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }
